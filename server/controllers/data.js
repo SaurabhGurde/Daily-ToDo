@@ -26,14 +26,6 @@ export const getData = async (req, res) => {
           },
         },
       },
-      // select:{
-      //   title: true,
-      //   completions: {
-      //     select: {
-      //       completed: true
-      //     }
-      //   }
-      // }
     });
     if (tasks) {
       success = true;

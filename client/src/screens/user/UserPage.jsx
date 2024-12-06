@@ -50,7 +50,7 @@ const UserPage = () => {
                     "auth-token": token,
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ email: userEmail, date: dayjs().format("DD/MM/YYYY"), }),
+                body: JSON.stringify({ email: userEmail, date: date ?? dayjs().format("DD/MM/YYYY"), }),
             }
             );
 
@@ -180,23 +180,17 @@ const UserPage = () => {
 
     //------------------handle selected date change-------------------
     const handleDateTaskChange = async(date) => {
-       await getTodayData(date)
+       await getTodayData(dayjs(date).format("DD/MM/YYYY"))
        setSelectedDate(dayjs(date))
     }
 
     useEffect(() => {
-
-            getTodayData();
-            let a = dayjs("01/12/2024", "DD/MM/YYYY").format("MM/DD/YYYY");
-            console.log(dayjs(a));
-            // let a = dayjs("2024-12-05T14:37:35.536Z").format("DD/MM/YYYY");
-            // console.log(a)
-
+      getTodayData();
     }, []);
 
     return (
 
-        <>
+        <div className='userpage'>
             <NavBar />
             <div className='mt-3' style={{marginLeft: '5vw'}}>
                 <DatePickerCustom
@@ -210,7 +204,7 @@ const UserPage = () => {
                     <tr>
                         <th style={{ width: "10%", textAlign: 'center' }} scope="col">#</th>
                         <th style={{ width: "60%", textAlign: 'center' }} scope="col">Tasks</th>
-                        <th style={{ width: "10%", textAlign: 'center' }} scope="col">status</th>
+                        <th style={{ width: "10%", textAlign: 'center' }} scope="col">Status</th>
                         <th style={{ width: "20%", textAlign: 'center' }} scope="col">Button</th>
                     </tr>
                 </thead>
@@ -273,7 +267,7 @@ const UserPage = () => {
                 <button onClick={() => { setAddData(initialAddData); setAddConfirmDataOpen(!isAddConfirmDataOpen) }} style={{ width: "90vw", marginLeft: "5vw" }} className='btn btn-primary mt-2'>Cancel</button>
             }
 
-        </>
+        </div>
 
 
     );
