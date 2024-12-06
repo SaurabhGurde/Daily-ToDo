@@ -13,9 +13,7 @@ code {
 }
 body {
   background-color: #ddddf0;
-  /* background-color: #cfcff597; */
   height: 100vh;
   width: 100vw;
-  /* min-width: 600px; */
   font-family: Arial, sans-serif;
 }
