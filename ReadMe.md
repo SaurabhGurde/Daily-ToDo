@@ -10,19 +10,30 @@ npm install
 
 ### Run project
 
-## for front end
+## For front end
 ```bash
-cd client
+cd client && cp .env.example .env
 ```
 ```bash
 npm start
 ```
 
-## for server
+## For server
 Open new terminal
 ```bash
-cd server
+cd server && cp .env.example .env
 ```
 ```bash
 npm start
 ```
+<P align="center">OR</P>
+
+```bash
+nodemon
+```
+
+## For database
+Add postgres url string in .env file in server
+
+
+
