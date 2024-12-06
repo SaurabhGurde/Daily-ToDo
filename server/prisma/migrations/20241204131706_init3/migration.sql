@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "TaskCompletion" ALTER COLUMN "dateTime" SET DEFAULT CURRENT_TIMESTAMP;
