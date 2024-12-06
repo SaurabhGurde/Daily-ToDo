@@ -7,3 +7,22 @@ Daily ToDo list is website that tracks completion status of your tasks daily. It
 ```bash
 npm install
 ```
+
+### Run project
+
+## for front end
+```bash
+cd client
+```
+```bash
+npm start
+```
+
+## for server
+Open new terminal
+```bash
+cd server
+```
+```bash
+npm start
+```
