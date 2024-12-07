@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Daily ToDo list is website that tracks completion status of your tasks daily. It is build with react for front end, express for server, postgres for database and prisma for ORM.",
   "scripts": {
-    "install": "npm run install-client && npm run install-server",
+    "install": "npm install && npm run install-client && npm run install-server",
     "install-client": "cd client && npm i",
-    "install-server": "cd server && npm i"
+    "install-server": "cd server && npm i",
+    "start": "concurrently \"cd client && npm start\" \"cd ./server && npm run nodemon\""
   },
-  "author": ""
+  "author": "",
+  "dependencies": {
+    "concurrently": "^9.1.0"
+  }
 }
