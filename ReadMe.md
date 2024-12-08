@@ -37,6 +37,7 @@ start the project
 npm start
 ```
 <P align="center">OR</P>
+
 ```bash
 nodemon
 ```
