@@ -9,10 +9,9 @@ const app = express();
 dotenv.config();
 
 app.use(express.json());
-app.use(bodyParser.json({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
-app.use(express.static('public'));
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -22,5 +21,3 @@ app.use("/data", fetch, dataRouter);
 
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
-
-export default app
