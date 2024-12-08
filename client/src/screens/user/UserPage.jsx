@@ -170,6 +170,7 @@ const UserPage = () => {
         );
         const json = await response.json();
         if (json.success) {
+            toast.success("Task status updated successfully")
             getTodayData();
         }
         else {
