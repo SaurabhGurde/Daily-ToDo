@@ -26,6 +26,9 @@ export const getData = async (req, res) => {
           },
         },
       },
+      orderBy: {
+        createdAt: 'asc',
+      },
     });
     if (tasks) {
       success = true;

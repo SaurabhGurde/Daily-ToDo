@@ -185,6 +185,16 @@ const UserPage = () => {
        setSelectedDate(dayjs(date))
     }
 
+    //---------------handle edit click-----------------------
+    const handleEditClick = (index, title, description) => {
+        setisEditedRowOpen(index)
+        setEditData({
+            ...editData,
+            title: title,
+            description: description
+        })
+    }
+
     useEffect(() => {
       getTodayData();
     }, []);
@@ -217,8 +227,8 @@ const UserPage = () => {
                                 <td style={{ width: "60%" }}>
                                     {isEditedRowOpen === i ? (
                                         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
-                                            <input name='title' placeholder='Enter task...' onChange={handleSetEditData} style={{ width: "100%", borderRadius: "10px", paddingLeft: "15px", paddingRight: "15px" }} type='text' />
-                                            <input name='description' placeholder='Enter description...' onChange={handleSetEditData} style={{ width: "100%", borderRadius: "10px", paddingLeft: "15px", paddingRight: "15px", marginTop: "10px" }} type='text' />
+                                            <input value={editData.title} name='title' placeholder='Enter task...' onChange={handleSetEditData} style={{ width: "100%", borderRadius: "10px", paddingLeft: "15px", paddingRight: "15px" }} type='text' />
+                                            <input value={editData.description} name='description' placeholder='Enter description...' onChange={handleSetEditData} style={{ width: "100%", borderRadius: "10px", paddingLeft: "15px", paddingRight: "15px", marginTop: "10px" }} type='text' />
                                         </div>
                                     ) : (
                                         <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", width: '100%' }}>
@@ -235,7 +245,7 @@ const UserPage = () => {
                                     {isEditedRowOpen === i ? (
                                         <button className='btn btn-primary mx-2 my-2' onClick={() => { handleEditData(e.id); setisEditedRowOpen(-1) }}>Submit</button>
                                     ) : (
-                                        <button disabled={!isSelectedDateTodaysDate || !isAddConfirmDataOpen} onClick={() => setisEditedRowOpen(i)} className='btn btn-success mx-2 my-2'>Edit</button>
+                                        <button disabled={!isSelectedDateTodaysDate || !isAddConfirmDataOpen} onClick={() => handleEditClick(i, e.title, e.description)} className='btn btn-success mx-2 my-2'>Edit</button>
                                     )}
                                     {isEditedRowOpen === i ? (
                                         <button className='btn btn-danger' onClick={() => { setEditData(initialAddData); setisEditedRowOpen(-1) }}>Cancel</button>
