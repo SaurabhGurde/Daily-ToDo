@@ -21,3 +21,5 @@ app.use("/data", fetch, dataRouter);
 
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+
+export default app
