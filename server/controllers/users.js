@@ -84,6 +84,7 @@ export const loginUser = async (req, res) => {
     success = true;
 
     const authToken = jwt.sign(data, jwtSecret);
+    delete user.password
    return res.status(200).json({ success, authToken, user });
   } catch (error) {
     console.error(error.message);
