@@ -19,10 +19,20 @@ npm start
 ```
 
 ## For server
+
 Open new terminal
 ```bash
 cd server && cp .env.example .env
 ```
+
+add postgres connection string in .env
+```bash
+npx prisma generate
+```
+```bash
+npx prisma migrate dev --name < -give any name- >
+```
+start the project
 ```bash
 npm start
 ```
@@ -31,9 +41,6 @@ npm start
 ```bash
 nodemon
 ```
-
-## For database
-Add postgres url string in .env file in server
 
 
 
