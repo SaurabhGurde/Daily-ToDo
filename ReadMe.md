@@ -30,14 +30,13 @@ add postgres connection string in .env
 npx prisma generate
 ```
 ```bash
-npx prisma migrate dev --name < -give any name- >
+npx prisma migrate dev --name <give any name>
 ```
 start the project
 ```bash
 npm start
 ```
 <P align="center">OR</P>
-
 ```bash
 nodemon
 ```
