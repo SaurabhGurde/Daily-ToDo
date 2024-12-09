@@ -200,7 +200,6 @@ const UserPage = () => {
     }, []);
 
     return (
-
         <div className='userpage'>
             <NavBar />
             <div className='mt-3' style={{marginLeft: '5vw'}}>
@@ -279,8 +278,6 @@ const UserPage = () => {
             }
 
         </div>
-
-
     );
 };
 
