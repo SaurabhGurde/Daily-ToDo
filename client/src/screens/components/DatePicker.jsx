@@ -25,7 +25,7 @@ const DatePickerCustom = ({
           label={placeHolder ?? "Basic date picker"}
           disabled={disabled ?? false}
           disableFuture
-          minDate={dayjs(createdAt) || minDate}
+          minDate={minDate || dayjs(createdAt) }
           {...datePickerProps}
         />
       </DemoContainer>
