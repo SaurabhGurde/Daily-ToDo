@@ -28,20 +28,6 @@ const NavBar = () => {
                     <li className="nav-item active">
                         <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                     </li>
-                    {/* <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            user
-                        </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <p className="dropdown-item m-0" href="#">{userEmail}</p>
-                            <p className="dropdown-item m-0" href="#">Another action</p>
-                            <div className="dropdown-divider"></div>
-                            <a onClick={handleLogout} className="dropdown-item" href="#">Logout</a>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li> */}
                 </ul>
 
                 <div className="nav-item dropdown mr-5">

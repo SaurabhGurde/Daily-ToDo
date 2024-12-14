@@ -7,7 +7,7 @@ https://dailytodo.saurabhgurde.life/
 ### Installing
 
 ```bash
-npm install
+npm run setup
 ```
 
 ### Run project

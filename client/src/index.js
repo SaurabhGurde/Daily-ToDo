@@ -8,12 +8,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./redux/slice";
 import { store } from "./redux/store";
 import { StyledEngineProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <React.StrictMode>
       <StyledEngineProvider injectFirst>
+        <CssBaseline/>
       <App />
     </StyledEngineProvider>
     </React.StrictMode>

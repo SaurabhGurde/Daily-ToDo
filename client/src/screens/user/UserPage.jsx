@@ -139,14 +139,6 @@ const UserPage = () => {
         }
     }
 
-    //-----------------------handle logout-------------------------------    
-    const handleLogout = () => {
-        localStorage.removeItem('token')
-        localStorage.removeItem('userEmail')
-        dispatch(resetData())
-        navigate("/")
-    }
-
     //--------------------handle task status change----------------------
     const handleTaskStatusChange = async(checked, taskId) => {
         setIsloading(true)
